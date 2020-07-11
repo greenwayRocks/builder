@@ -6,4 +6,4 @@ before_install:
   - docker build -f Dockerfile.dev -t greenway71/builder .
 
 script:
-  - docker run greenway71/builder npm run test -- --coverage
+  - docker run -e CI=true greenway71/builder npm run test
